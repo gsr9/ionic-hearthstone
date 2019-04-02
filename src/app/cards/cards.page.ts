@@ -18,7 +18,7 @@ export class CardsPage{
 
   constructor(private cardService: CardService) {
     this.getCardDecks()
-    
+
   }
 
   extractAllowedDecks(cardDecks: CardDeck[]) {
