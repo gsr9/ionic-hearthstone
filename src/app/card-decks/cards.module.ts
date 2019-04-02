@@ -6,6 +6,9 @@ import { Routes, RouterModule } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
 
 import { CardsPage } from './cards.page';
+import { CardListComponent } from '../components/card-list/card-list.component';
+import { CardService } from '../card/card.service';
+import { HttpClientModule } from '@angular/common/http';
 
 const routes: Routes = [
   {
@@ -19,8 +22,10 @@ const routes: Routes = [
     CommonModule,
     FormsModule,
     IonicModule,
+    HttpClientModule,
     RouterModule.forChild(routes)
   ],
-  declarations: [CardsPage]
+  declarations: [CardsPage, CardListComponent],
+  providers:[CardService]
 })
 export class CardsPageModule {}
